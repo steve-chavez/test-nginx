@@ -2029,7 +2029,7 @@ start_nginx:
             my $cmd;
 
             if ($NginxVersion >= 0.007053) {
-                $cmd = "$NginxBinary -p $ServRoot/ -c $ConfFile > /dev/null";
+                $cmd = "$NginxBinary -e stderr -p $ServRoot/ -c $ConfFile > /dev/null";
             } else {
                 $cmd = "$NginxBinary -c $ConfFile > /dev/null";
             }
